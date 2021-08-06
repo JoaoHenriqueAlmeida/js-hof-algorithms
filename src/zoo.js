@@ -71,11 +71,17 @@ function getSchedule(dayName) {
 }
 
 function getOldestFromFirstSpecies(id) {
-  // seu código aqui
+
 }
 
 function increasePrices(percentage) {
-  // seu código aqui
+  const increase = percentage / 100;
+  const adultNewPrice = prices.Adult + (increase * (prices.Adult));
+  const childNewPrice = prices.Child + (increase * (prices.Child));
+  const seniorNewPrice = prices.Senior + (increase * (prices.Senior));
+  prices.Adult = Math.round(adultNewPrice * 100) / 100;
+  prices.Child = Math.round(childNewPrice * 100) / 100;
+  prices.Senior = Math.round(seniorNewPrice * 100) / 100;
 }
 
 function getEmployeeCoverage(idOrName) {
